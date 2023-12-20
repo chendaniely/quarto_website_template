@@ -5,3 +5,5 @@ title: "Quarto Website Template"
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+This is an example of a non-working page: <https://quarto.org/not/a/working/page.html>
