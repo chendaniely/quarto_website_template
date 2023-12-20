@@ -3,6 +3,8 @@ name: Check Links
 on:
   repository_dispatch:
   workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * *"
 
 jobs:
   linkChecker:
@@ -29,7 +31,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-          args: '--cache --max-cache-age 1d _site/**/*.html'
+          args: '--verbose --cache --max-cache-age 1d _site/**/*.html'
+          output: "./lychee/out.md"
 
       - name: Create Issue From File
         if: env.lychee_exit_code != 0
