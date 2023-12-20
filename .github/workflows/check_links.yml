@@ -41,4 +41,10 @@ jobs:
         with:
           title: Link Checker Report
           content-filepath: /tmp/lychee.out
-          labels: report, automated issue
+          labels: |
+            report
+            automated issue
+
+      - name: cat lychee output
+        run: |
+          cat /tmp/lychee.out
