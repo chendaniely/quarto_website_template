@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "quarto_website_workflows"
+  title: "Quarto Website Template"
   navbar:
     left:
       - href: index.qmd

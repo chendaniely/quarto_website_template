@@ -1,5 +1,5 @@
 ---
-title: "quarto_website_workflows"
+title: "Quarto Website Template"
 ---
 
 This is a Quarto website.
