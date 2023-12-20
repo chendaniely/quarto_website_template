@@ -47,4 +47,5 @@ jobs:
 
       - name: cat lychee output
         run: |
+          echo ${{ steps.lychee.outputs.exit_code }}
           cat /tmp/lychee.out
