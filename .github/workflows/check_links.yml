@@ -45,6 +45,12 @@ jobs:
             report
             automated issue
 
+      - name: Test if lychee fail
+        if: steps.lychee.outputs.exit_code != 0
+        run:
+          echo "lychee output !=0"
+          echo ${{ steps.lychee.outputs.exit_code }}
+
       - name: cat lychee output
         run: |
           echo ${{ steps.lychee.outputs.exit_code }}
