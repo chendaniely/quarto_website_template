@@ -86,9 +86,9 @@ jobs:
           npm install -g netlify-cli
           # push main branch to production, others to preview --
           if [ "${REF_NAME}" = "master" ] || [ "${REF_NAME}" = "main" ]; then
-            netlify deploy --dir=_build/ --prod
+            netlify deploy --dir=_site/ --prod
           else
-            netlify deploy --dir=_build/ --alias="${ALIAS}"
+            netlify deploy --dir=_site/ --alias="${ALIAS}"
           fi
       - name: Update Github "view deployment" button in PR
         uses: bobheadxi/deployments@v1
@@ -99,5 +99,5 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env: ${{ steps.deployment.outputs.env }}
-          env_url: 'https://${{ steps.deployment.outputs.env }}--shiny-dev-center.netlify.app'
+          env_url: 'https://${{ steps.deployment.outputs.env }}--quarto-website-template.netlify.app'
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
