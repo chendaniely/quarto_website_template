@@ -5,3 +5,11 @@ preview:
 .PHONY: serve
 serve:
 	make preview
+
+.PHONY: render
+render:
+	quarto render
+
+.PHONY: build
+build:
+	quarto render
