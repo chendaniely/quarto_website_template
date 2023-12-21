@@ -1,6 +1,6 @@
-# quarto_website_workflows
+# Quarto Website Template
 
-A quarto website with some automation
+A quarto website with some automation.
 
 ## First Time Setup
 
